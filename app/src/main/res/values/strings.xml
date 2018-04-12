@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">ChatApplicationMVP</string>
+    <string name="prompt_email">Email</string>
+    <string name="name_password">Password</string>
+    <string name="action_sign_in_short">Sign In</string>
+    <string name="sign_in">Sign in</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="login_error_message_sing_in">Error Password</string>
+    <string name="login_error_message_singin">Errror Singin</string>
+    <string name="login_notice_message_useradded">Success Added</string>
+</resources>
