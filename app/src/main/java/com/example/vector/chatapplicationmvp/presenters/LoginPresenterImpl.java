@@ -57,10 +57,49 @@ public class LoginPresenterImpl implements LoginPresenter {
     }
 
 
-//    @Subscribe
-//    public void onEventMainThread(LoginEvent event){
-//        switch (event.)
-//    }
+    /*@Override
+    @Subscribe
+    public void onEventMainThread(LoginEvent event){
+        switch (event.getEventType()){
+
+        }
+    }*/
+
+    private void onSignInSucces(){
+        if(mLoginView != null){
+            mLoginView.navigateToMainScreen();
+        }
+    }
+
+    private void onSignUpSucces(){
+        if(mLoginView != null){
+            mLoginView.newUserSucces();
+        }
+    }
+
+    private void onSignInError(String error){
+        if(mLoginView != null){
+            mLoginView.hideProgressBar();
+            mLoginView.enabledInputs();
+            mLoginView.loginError(error);
+        }
+    }
+
+    private void onSignUpError(String error){
+        if(mLoginView != null){
+            mLoginView.hideProgressBar();
+            mLoginView.enabledInputs();
+            mLoginView.loginError(error);
+        }
+    }
+
+    private void onFailedToRecoverSession(){
+        if(mLoginView != null){
+            mLoginView.hideProgressBar();
+            mLoginView.enabledInputs();
+        }
+    }
+
 
 
 

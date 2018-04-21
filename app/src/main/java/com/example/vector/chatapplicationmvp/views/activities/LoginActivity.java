@@ -132,6 +132,11 @@ public class LoginActivity extends AppCompatActivity implements LoginView{
         mEmail.setError(msgError);
     }
 
+    @Override
+    public void navigateToMainScreen() {
+        startActivity(new Intent(this, ContactListActivity.class ));
+    }
+
     private void setInputs(boolean b) {
         btnSignIn.setEnabled(true);
         btnSignUp.setEnabled(true);
